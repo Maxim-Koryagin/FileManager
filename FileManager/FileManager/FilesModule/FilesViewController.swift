@@ -20,7 +20,7 @@ final class FilesViewController: UIViewController {
     
     private lazy var addButtonItem: UIBarButtonItem = {
         let button = UIBarButtonItem(title: "Add Photo", style: .plain, target: self, action: #selector(showImagePicker))
-        button.tintColor = .black
+        button.tintColor = .systemCyan
         return button
     }()
     
@@ -40,8 +40,12 @@ final class FilesViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(path)
         setupUI()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
     }
     
     //MARK: - Methods
@@ -102,6 +106,12 @@ extension FilesViewController: UITableViewDelegate, UITableViewDataSource {
 
         let fullPath = path + "/" + files[indexPath.row]
         
+        var localFiles = self.files
+        
+        if UserDefaults.standard.string(forKey: "sort") == "on" {
+            localFiles.sort(by: <)
+        }
+        
         var isDir: ObjCBool = false
         if FileManager.default.fileExists(atPath: fullPath, isDirectory: &isDir) {
             if isDir.boolValue == true {
@@ -111,7 +121,7 @@ extension FilesViewController: UITableViewDelegate, UITableViewDataSource {
             }
         }
     
-        cell.descriptionLabel.text = files[indexPath.row]
+        cell.descriptionLabel.text = localFiles[indexPath.row]
         
         return cell
     }

@@ -9,23 +9,23 @@ import Foundation
 
 import UIKit
 
-class TabBarController: UITabBarController {
+final class TabBarController: UITabBarController {
     
     // MARK: Properties
     
-    var firstTabNavigationController: UINavigationController!
-    var secondTabNavigationController: UINavigationController!
+    private var firstTabNavigationController: UINavigationController!
+    private var secondTabNavigationController: UINavigationController!
     
     // MARK: Life cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupUI()
+        setupTabBar()
     }
     
     // MARK: Methods
     
-    private func setupUI() {
+    private func setupTabBar() {
         
         firstTabNavigationController = UINavigationController.init(rootViewController: FilesViewController())
         secondTabNavigationController = UINavigationController.init(rootViewController: SettingsViewController())

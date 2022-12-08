@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A09B0CE293F5E4B006A9D58 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A09B0CD293F5E4B006A9D58 /* LoginViewController.swift */; };
+		6A09B0D2293F6459006A9D58 /* CoordinatorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A09B0D1293F6459006A9D58 /* CoordinatorProtocol.swift */; };
+		6A09B0D4293F6463006A9D58 /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A09B0D3293F6463006A9D58 /* AppCoordinator.swift */; };
+		6A09B0D6293F64C5006A9D58 /* TabBarCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A09B0D5293F64C5006A9D58 /* TabBarCoordinator.swift */; };
+		6A09B0D8293F64CF006A9D58 /* LoginCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A09B0D7293F64CF006A9D58 /* LoginCoordinator.swift */; };
 		6A0A6A17293DEFD9000DB22A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0A6A16293DEFD9000DB22A /* TabBarController.swift */; };
 		6A0A6A1B293DF154000DB22A /* FilesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0A6A1A293DF154000DB22A /* FilesViewController.swift */; };
 		6A0A6A1D293DFD58000DB22A /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A0A6A1C293DFD58000DB22A /* SettingsViewController.swift */; };
@@ -15,9 +20,16 @@
 		6A5E3597293B5E5E00A40117 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A5E3596293B5E5E00A40117 /* SceneDelegate.swift */; };
 		6A5E359E293B5E5F00A40117 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A5E359D293B5E5F00A40117 /* Assets.xcassets */; };
 		6A5E35A1293B5E5F00A40117 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A5E359F293B5E5F00A40117 /* LaunchScreen.storyboard */; };
+		6A8596D62940E222002D4553 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A8596D52940E222002D4553 /* Credentials.swift */; };
+		6A8596DC2940F291002D4553 /* KeychainSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 6A8596DB2940F291002D4553 /* KeychainSwift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A09B0CD293F5E4B006A9D58 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6A09B0D1293F6459006A9D58 /* CoordinatorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatorProtocol.swift; sourceTree = "<group>"; };
+		6A09B0D3293F6463006A9D58 /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		6A09B0D5293F64C5006A9D58 /* TabBarCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarCoordinator.swift; sourceTree = "<group>"; };
+		6A09B0D7293F64CF006A9D58 /* LoginCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCoordinator.swift; sourceTree = "<group>"; };
 		6A0A6A16293DEFD9000DB22A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		6A0A6A1A293DF154000DB22A /* FilesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilesViewController.swift; sourceTree = "<group>"; };
 		6A0A6A1C293DFD58000DB22A /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +40,7 @@
 		6A5E359D293B5E5F00A40117 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6A5E35A0293B5E5F00A40117 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6A5E35A2293B5E5F00A40117 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6A8596D52940E222002D4553 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,12 +48,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A8596DC2940F291002D4553 /* KeychainSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6A09B0CF293F5E4F006A9D58 /* LoginModule */ = {
+			isa = PBXGroup;
+			children = (
+				6A09B0CD293F5E4B006A9D58 /* LoginViewController.swift */,
+				6A8596D52940E222002D4553 /* Credentials.swift */,
+			);
+			path = LoginModule;
+			sourceTree = "<group>";
+		};
+		6A09B0D0293F643D006A9D58 /* Coordinators */ = {
+			isa = PBXGroup;
+			children = (
+				6A09B0D1293F6459006A9D58 /* CoordinatorProtocol.swift */,
+				6A09B0D3293F6463006A9D58 /* AppCoordinator.swift */,
+				6A09B0D7293F64CF006A9D58 /* LoginCoordinator.swift */,
+				6A09B0D5293F64C5006A9D58 /* TabBarCoordinator.swift */,
+			);
+			path = Coordinators;
+			sourceTree = "<group>";
+		};
 		6A0A6A18293DF03A000DB22A /* Application */ = {
 			isa = PBXGroup;
 			children = (
@@ -95,7 +129,9 @@
 			isa = PBXGroup;
 			children = (
 				6A0A6A18293DF03A000DB22A /* Application */,
+				6A09B0D0293F643D006A9D58 /* Coordinators */,
 				6A0A6A19293DF04F000DB22A /* TabBarModule */,
+				6A09B0CF293F5E4F006A9D58 /* LoginModule */,
 				6A0A6A1F293DFDCD000DB22A /* FilesModule */,
 				6A0A6A1E293DFDC2000DB22A /* SettingsModule */,
 				6A5E359D293B5E5F00A40117 /* Assets.xcassets */,
@@ -121,6 +157,9 @@
 			dependencies = (
 			);
 			name = FileManager;
+			packageProductDependencies = (
+				6A8596DB2940F291002D4553 /* KeychainSwift */,
+			);
 			productName = FileManager;
 			productReference = 6A5E3591293B5E5E00A40117 /* FileManager.app */;
 			productType = "com.apple.product-type.application";
@@ -149,6 +188,9 @@
 				Base,
 			);
 			mainGroup = 6A5E3588293B5E5E00A40117;
+			packageReferences = (
+				6A8596DA2940F291002D4553 /* XCRemoteSwiftPackageReference "keychain-swift" */,
+			);
 			productRefGroup = 6A5E3592293B5E5E00A40117 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -175,11 +217,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6A09B0CE293F5E4B006A9D58 /* LoginViewController.swift in Sources */,
 				6A0A6A17293DEFD9000DB22A /* TabBarController.swift in Sources */,
+				6A09B0D2293F6459006A9D58 /* CoordinatorProtocol.swift in Sources */,
 				6A0A6A21293DFE94000DB22A /* FilesTableViewCell.swift in Sources */,
+				6A09B0D8293F64CF006A9D58 /* LoginCoordinator.swift in Sources */,
 				6A5E3595293B5E5E00A40117 /* AppDelegate.swift in Sources */,
+				6A8596D62940E222002D4553 /* Credentials.swift in Sources */,
 				6A0A6A1B293DF154000DB22A /* FilesViewController.swift in Sources */,
+				6A09B0D4293F6463006A9D58 /* AppCoordinator.swift in Sources */,
 				6A5E3597293B5E5E00A40117 /* SceneDelegate.swift in Sources */,
+				6A09B0D6293F64C5006A9D58 /* TabBarCoordinator.swift in Sources */,
 				6A0A6A1D293DFD58000DB22A /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -325,8 +373,8 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -353,8 +401,8 @@
 				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Please allow access.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -390,6 +438,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6A8596DA2940F291002D4553 /* XCRemoteSwiftPackageReference "keychain-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/evgenyneu/keychain-swift";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6A8596DB2940F291002D4553 /* KeychainSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6A8596DA2940F291002D4553 /* XCRemoteSwiftPackageReference "keychain-swift" */;
+			productName = KeychainSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6A5E3589293B5E5E00A40117 /* Project object */;
 }
